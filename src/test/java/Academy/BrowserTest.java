@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 
+
 public class BrowserTest {
 
 	
@@ -18,7 +19,10 @@ public class BrowserTest {
 	{
 		System.out.println("Hello Guys");
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		WebDriver driver =new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://simonwebapp.azurewebsites.net/webapp/");
 		String text =driver.findElement(By.cssSelector("h1")).getText();
 		System.out.println(text);
