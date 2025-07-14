@@ -24,13 +24,12 @@ public class BrowserTest {
 		options.addArguments("--start-maximized");
 
 		WebDriver driver = new ChromeDriver(options);
-		driver.get("https://simonwebapp.azurewebsites.net/webapp/");
+		/*driver.get("https://simonwebapp.azurewebsites.net/webapp/");*/
+		driver.get("http://localhost:8080/webapp/");
 		String text =driver.findElement(By.cssSelector("h1")).getText();
 		System.out.println(text);
-		Assert.assertTrue(text.equalsIgnoreCase("Simon Says ------ Thankyou"));
+		Assert.assertTrue(text.equalsIgnoreCase("Simon's Web page For Demonstration"));
 		driver.close();
-	
-		
-		
+			
 	}
 }
