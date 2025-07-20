@@ -10,12 +10,11 @@ on:
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
-
     steps:
-    #- name: Checkout GitHub Repo
+    - name: Checkout GitHub Repo
       uses: actions/checkout@v4
 
-    - name: Run sync script
+    #- name: Run sync script
       env:
         AZURE_PAT: ${{secrets.AZURE_PAT}}
 		AZURE_NAME: ${{secrets.AZURE_NAME}}
@@ -24,4 +23,4 @@ jobs:
       run: |
         chmod +x ./script/sync-to-azure.sh
         ./script/sync-to-azure.sh
-      shell: bash 
+      shell: bash
