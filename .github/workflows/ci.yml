@@ -1,0 +1,27 @@
+# .github/workflows/push-to-devops.yml
+
+name: Push GitHub Directory to Azure DevOps
+
+on:
+  push:
+    branches:
+      - main  # or your preferred branch
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+
+    steps:
+    #- name: Checkout GitHub Repo
+      uses: actions/checkout@v4
+
+    - name: Run sync script
+      env:
+        AZURE_PAT: ${{secrets.AZURE_PAT}}
+		AZURE_NAME: ${{secrets.AZURE_NAME}}
+		AZURE_EMAIL: ${{secrets.AZURE_EMAIL}}
+		AZURE_ORG: ${{secrets.AZURE_ORG}}
+      run: |
+        chmod +x ./script/sync-to-azure.sh
+        ./script/sync-to-azure.sh
+      shell: bash 
