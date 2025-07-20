@@ -1,4 +1,4 @@
-# .github/workflows/push-to-devops.yml
+# # .github/workflows/ci.yml
 
 name: Push GitHub Directory to Azure DevOps
 
