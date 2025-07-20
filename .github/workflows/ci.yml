@@ -5,7 +5,7 @@ name: Push GitHub Directory to Azure DevOps
 on:
   push:
     branches:
-      - main  # or your preferred branch
+      - master  # or your preferred branch
 
 jobs:
   check-bats-version:
