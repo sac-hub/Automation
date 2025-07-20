@@ -15,7 +15,7 @@ rm -rf Automation/.git
 
 git fetch
 
-git pull https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My first DevOps/_git/Automation.git
+git pull https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
 
 git config --global user.name "$AZURE_NAME"
 git config --global user.email "$AZURE_EMAIL"

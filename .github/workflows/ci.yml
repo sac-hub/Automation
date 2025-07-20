@@ -16,7 +16,7 @@ jobs:
 
     - name: Run sync script
       env:
-        AZURE_PAT: ${{secrets.AZURE_PAT}}
+        PAT: ${{secrets.AZURE_PAT}}
 		AZURE_NAME: ${{secrets.AZURE_NAME}}
 		AZURE_EMAIL: ${{secrets.AZURE_EMAIL}}
 		AZURE_ORG: ${{secrets.AZURE_ORG}}
