@@ -14,7 +14,7 @@ AZURE_ORG=$AZURE_ORG
 rm -rf Automation/.git
 
 #git fetch origin
-#git rebase --root origin/master
+#git rebase --root origin/master**
 
 # Fetch the changes from Azure DevOps to ensure we have latest
 git fetch --unshallow
