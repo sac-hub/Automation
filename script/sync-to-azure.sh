@@ -9,7 +9,7 @@ AZURE_NAME=$AZURE_NAME
 AZURE_EMAIL=$AZURE_EMAIL
 AZURE_ORG=$AZURE_ORG
 
-# === Derived ===+
+# === Derived ===++
 
 rm -rf Automation/.git
 
