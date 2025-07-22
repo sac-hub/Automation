@@ -14,7 +14,7 @@ AZURE_ORG=$AZURE_ORG
 rm -rf Automation/.git
 
 git fetch origin
-git merge --allow-unrelated-histories origin/master
+git rebase --root origin/master
 
 git pull --ff-only https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
 
