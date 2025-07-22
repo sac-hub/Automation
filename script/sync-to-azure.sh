@@ -29,6 +29,6 @@ git config --global user.email "$AZURE_EMAIL"
 # Add all changes into stage, commit, and push to Azure DevOps
 git add .
 git commit -m "Sync from GitHub to Azure DevOps"
-git push --force https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
+git push --force https://$AZUSERNAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
 
 echo "✅ Sync complete"
