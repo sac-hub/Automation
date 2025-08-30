@@ -52,8 +52,18 @@ echo "1"
 git fetch #--unshallow
 echo "2"
 # Pull changes from Azure DevOps if its exiting branch and have commits on it
-git pull https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
+
+REMOTE_URL="https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git"
+#git pull https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
 echo "3"
+# Fetch remote branch
+git fetch "$REMOTE_URL" main
+
+# Reset local branch to match remote
+git reset --hard FETCH_HEAD
+
+echo "Repo synced with remote successfully."
+
 # Set Git user identity
 git config --global user.name "$AZURE_NAME"
 git config --global user.email "$AZURE_EMAIL"
