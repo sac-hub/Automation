@@ -57,7 +57,7 @@ REMOTE_URL="https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%2
 #git pull https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
 echo "3"
 # Fetch remote branch
-git fetch "$REMOTE_URL" main
+git fetch "$REMOTE_URL" master
 
 # Reset local branch to match remote
 git reset --hard FETCH_HEAD
