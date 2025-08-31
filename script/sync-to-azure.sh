@@ -1,6 +1,40 @@
 #!/usr/bin/env bash
 set -e
 
+# Required Bats version
+REQUIRED_BATS_VERSION="1.8.2"
+
+# Temporary install directory
+BATS_TMP="/tmp/bats-core"
+
+# Check if bats is installed
+if ! command -v bats &> /dev/null; then
+  echo "Bats not found. Installing Bats..."
+  rm -rf "$BATS_TMP"
+  git clone https://github.com/bats-core/bats-core.git "$BATS_TMP"
+  sudo "$BATS_TMP/install.sh" /usr/local
+fi
+
+# Get installed Bats version
+INSTALLED_BATS_VERSION=$(bats --version | awk '{print $2}')
+
+# Compare versions
+if [ "$INSTALLED_BATS_VERSION" != "$REQUIRED_BATS_VERSION" ]; then
+  echo "Installed Bats version ($INSTALLED_BATS_VERSION) does not match required version ($REQUIRED_BATS_VERSION). Reinstalling..."
+  rm -rf "$BATS_TMP"
+  git clone https://github.com/bats-core/bats-core.git "$BATS_TMP"
+  cd "$BATS_TMP"
+  sudo ./install.sh /usr/local
+fi
+
+# Confirm installation
+echo "Bats version $(bats --version) installed successfully."
+
+
+# Confirm installation
+echo "Bats version $(bats --version) installed successfully."
+
+
 # === Configuration =======================================================================================
 
 AZURE_PAT=$AZURE_PAT
