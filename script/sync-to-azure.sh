@@ -74,7 +74,7 @@ echo "4"
 git add .
 echo "45"
 
-git commit -m "Sync from GitHub to Azure DevOps"
+#git commit -m "Sync from GitHub to Azure DevOps"
 echo "6"
 git push "$REMOTE_URL" master --force
 #git push --force https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
