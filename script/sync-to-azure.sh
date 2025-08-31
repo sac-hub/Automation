@@ -47,10 +47,11 @@ REMOTE_URL="https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%2
 echo "1"
 git remote remove origin || true
 git remote add origin "$GITHUB_URL"
-echo "2"
+
 echo "Fetching from GitHub..."
 git fetch origin master
 echo "2"
+
 # Pull changes from Azure DevOps if its exiting branch and have commits on it
 
 
