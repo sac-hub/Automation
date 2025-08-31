@@ -71,8 +71,10 @@ echo "4"
 # Add all changes into stage, commit, and push to Azure DevOps dd
 git add .
 echo "45"
-git commit -m "Sync from GitHub to Azure DevOps"
+git push "$REMOTE_URL" master --force
+
+#git commit -m "Sync from GitHub to Azure DevOps"
 echo "6"
-git push --force https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
+#git push --force https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
 echo "7"
-echo "✅ Sync complete"
+#echo "✅ Sync complete"
