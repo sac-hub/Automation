@@ -16,7 +16,7 @@ REMOTE_URL="https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%2
 
 # === Sync Process ========================================================================================
 
-echo "1. Resetting remotes..."
+echo "1. Resetting remotes... "
 git remote remove origin || true
 git remote add origin "$GITHUB_URL"
 
