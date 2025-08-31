@@ -27,7 +27,7 @@ public class BrowserTest {
 		driver.get("https://simonwebapp.azurewebsites.net/webapp/");
 		/*driver.get("http://localhost:8080/webapp/");*/
 		String text =driver.findElement(By.cssSelector("h1")).getText();
-		System.out.println(text);
+		System.out.println(text); 
 		Assert.assertTrue(text.equalsIgnoreCase("Simon's Web page For Demonstration"));
 		driver.close();
 			
