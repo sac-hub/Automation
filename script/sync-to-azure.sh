@@ -40,6 +40,8 @@ AZURE_PAT=$AZURE_PAT
 AZURE_NAME=$AZURE_NAME
 AZURE_EMAIL=$AZURE_EMAIL
 AZURE_ORG=$AZURE_ORG
+GITHUB_URL="https://github.com/<your-user>/<correct-repo>.git"
+REMOTE_URL="https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git"
 
 # === Derived ===++
 
@@ -49,11 +51,11 @@ rm -rf Automation/.git
 #git rebase --root origin/master**
 echo "1"
 # Fetch the changes from Azure DevOps to ensure we have latest
-git fetch #--unshallow
+git fetch GITHUB_URL
 echo "2"
 # Pull changes from Azure DevOps if its exiting branch and have commits on it
 
-REMOTE_URL="https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git"
+
 #git pull https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git
 echo "3"
 # Fetch remote branch
@@ -68,7 +70,7 @@ echo "Repo synced with remote successfully."
 git config --global user.name "$AZURE_NAME"
 git config --global user.email "$AZURE_EMAIL"
 echo "4"
-git push "$REMOTE_URL" master --force
+#git push "$REMOTE_URL" master --force
 # Add all changes into stage, commit, and push to Azure DevOps dd
 git add .
 echo "45"
