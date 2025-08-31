@@ -51,7 +51,7 @@ rm -rf Automation/.git
 #git rebase --root origin/master**
 echo "1"
 # Fetch the changes from Azure DevOps to ensure we have latest
-git fetch GITHUB_URL
+git fetch $GITHUB_URL
 echo "2"
 # Pull changes from Azure DevOps if its exiting branch and have commits on it
 
