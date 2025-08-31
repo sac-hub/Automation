@@ -68,7 +68,7 @@ echo "Repo synced with remote successfully."
 git config --global user.name "$AZURE_NAME"
 git config --global user.email "$AZURE_EMAIL"
 echo "4"
-git push origin master --force
+git push "$REMOTE_URL" master --force
 # Add all changes into stage, commit, and push to Azure DevOps dd
 git add .
 echo "45"
