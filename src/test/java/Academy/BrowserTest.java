@@ -18,7 +18,7 @@ public class BrowserTest {
 	@Test
 	public void getData()
 	{
-		System.out.println("Hello Guys UPDATED 1234567891011121314151617");
+		System.out.println("Hello Guys UPDATED 123456789101112131415161718");
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
