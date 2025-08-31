@@ -61,13 +61,14 @@ git fetch "$REMOTE_URL" master
 
 # Reset local branch to match remote
 #git reset --hard FETCH_HEAD
-git push origin master --force
+
 echo "Repo synced with remote successfully."
 
 # Set Git user identity
 git config --global user.name "$AZURE_NAME"
 git config --global user.email "$AZURE_EMAIL"
 echo "4"
+git push origin master --force
 # Add all changes into stage, commit, and push to Azure DevOps dd
 git add .
 echo "45"
