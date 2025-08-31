@@ -72,7 +72,7 @@ echo "4"
 #git push "$REMOTE_URL" master --force
 # Add all changes into stage, commit, and push to Azure DevOps dd
 git add .
-echo "456"
+echo "4567"
 
 git commit -m "Sync from GitHub to Azure DevOps "
 echo "6"
