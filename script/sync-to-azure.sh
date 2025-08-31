@@ -40,7 +40,7 @@ AZURE_PAT=$AZURE_PAT
 AZURE_NAME=$AZURE_NAME
 AZURE_EMAIL=$AZURE_EMAIL
 AZURE_ORG=$AZURE_ORG
-GITHUB_URL="https://github.com/<your-user>/<correct-repo>.git"
+GITHUB_URL="https://github.com/sac-hub/Automation.git"
 REMOTE_URL="https://$AZURE_NAME:$AZURE_PAT@dev.azure.com/$AZURE_ORG/My%20first%20DevOps/_git/Automation.git"
 
 # === Derived ===++
